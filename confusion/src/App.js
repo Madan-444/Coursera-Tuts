@@ -1,34 +1,17 @@
-import React, {Component} from 'react';
-import {Navbar,NavbarBrand} from 'reactstrap'
-import logo from './logo.svg';
-import { DISHES } from '../src/sheared/dishes'
-import Menu from './components/MenuComponents';
+import React, { Component } from 'react';
+import Main from './components/MainComponent';
 
 
 class App extends Component {
-  constructor(props) {
-    super(props)
-  
-    this.state = {
-       dishes:DISHES
-    }
-  }
-  
   render() {
     return (
       <div >
-        <Navbar dark color='primary'>
-          <div className='container'>
-            <NavbarBrand href='/'>Ristorante con fusion</NavbarBrand>
-          </div>
-        </Navbar>
-        <Menu dishes = {this.state.dishes}/>
-        
+        <Main />
       </div>
     );
-    }
-    
   }
+
+}
 
 export default App;
 
